@@ -8,9 +8,6 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @RunWith(MockitoJUnitRunner.class)
 public class BurgerTest {
     Burger burger;
@@ -19,10 +16,7 @@ public class BurgerTest {
     @Mock
     Ingredient ingredient;
 
-    private final String nameBun = "Big bun";
-    private final String nameIngredient = "hot sauce";
-
-    private static float price = 10.0f;
+    private final float price = 10.0f;
 
 
     @Before
@@ -73,6 +67,8 @@ public class BurgerTest {
 
     @Test
     public void getReceiptTest(){
+        final String nameBun = "Big bun";
+        final String nameIngredient = "hot sauce";
 
         burger.setBuns(bun);
         burger.addIngredient(ingredient);
