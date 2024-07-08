@@ -8,10 +8,10 @@ import org.junit.runners.Parameterized;
 
 @RunWith(Parameterized.class)
 public class IngredientTest {
-    Ingredient ingredient;
+    private Ingredient ingredient;
     private final String nameIngredient;
     private final float priceIngredient;
-    IngredientType ingredientType;
+    private IngredientType ingredientType;
 
     public IngredientTest(String nameIngredient, float priceIngredient, IngredientType ingredientType){
         this.nameIngredient = nameIngredient;

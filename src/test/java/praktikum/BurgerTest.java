@@ -10,7 +10,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 @RunWith(MockitoJUnitRunner.class)
 public class BurgerTest {
-    Burger burger;
+    private Burger burger;
     @Mock
     Bun bun;
     @Mock
@@ -33,14 +33,16 @@ public class BurgerTest {
     @Test
     public void addIngredientTest(){
         burger.addIngredient(ingredient);
-        Assert.assertEquals("Ожидался 1 ингредиент!", 1, burger.ingredients.size());
+        int count_ingredients = 1;
+        Assert.assertEquals("Ожидался 1 ингредиент!", count_ingredients, burger.ingredients.size());
     }
 
     @Test
     public void removeIngredientTest(){
         burger.addIngredient(ingredient);
         burger.removeIngredient(0);
-        Assert.assertEquals("Ожидалось 0 ингредиентов!", 0, burger.ingredients.size());
+        int count_ingredients = 0;
+        Assert.assertEquals("Ожидалось 0 ингредиентов!", count_ingredients, burger.ingredients.size());
     }
 
     @Test
@@ -48,6 +50,7 @@ public class BurgerTest {
         burger.addIngredient(ingredient);
         burger.addIngredient(ingredient);
         burger.moveIngredient(0, 1);
+        int count_ingredients = 2;
         Assert.assertEquals( 2, burger.ingredients.size());
     }
 
