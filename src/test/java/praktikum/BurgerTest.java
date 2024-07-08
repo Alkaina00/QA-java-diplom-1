@@ -51,7 +51,7 @@ public class BurgerTest {
         burger.addIngredient(ingredient);
         burger.moveIngredient(0, 1);
         int count_ingredients = 2;
-        Assert.assertEquals( 2, burger.ingredients.size());
+        Assert.assertEquals( count_ingredients, burger.ingredients.size());
     }
 
     @Test
